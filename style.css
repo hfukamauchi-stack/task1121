@@ -1,0 +1,650 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --green: #244c3b;
+  --dark-green: #17382b;
+  --orange: #c66c43;
+  --paper: #f5f2e9;
+  --white: #fffdf8;
+  --text: #292d27;
+  --muted: #77786e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.8;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* HEADER */
+
+.header {
+  height: 70px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #ddd9ce;
+}
+
+.logo,
+.footer-logo {
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header nav a {
+  color: var(--text);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* INTRO */
+
+.intro-section {
+  min-height: 440px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+  overflow: hidden;
+  background: #31483c;
+}
+
+.intro-background {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(17, 39, 29, 0.7), rgba(17, 39, 29, 0.12) 75%),
+    linear-gradient(90deg, rgba(17, 39, 29, 0.83), rgba(17, 39, 29, 0.25)),
+    url("./img/hawker-centre.jpeg");
+  background-size: cover;
+  background-position: center, center, center 35%;
+  opacity: 0.9;
+}
+
+.intro-content {
+  position: relative;
+  color: white;
+}
+
+.eyebrow {
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--orange);
+  margin-bottom: 13px;
+}
+
+.intro-content .eyebrow {
+  color: #e9b18d;
+}
+
+.intro-content h1 {
+  font-size: clamp(28px, 4vw, 45px);
+  line-height: 1.6;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.intro-content > p:last-child {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+/* GENERAL SECTION */
+
+.section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 90px 30px;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FILTER */
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 25px;
+}
+
+.filter-button {
+  background: transparent;
+  border: 1px solid #c9c5b9;
+  border-radius: 30px;
+  padding: 7px 17px;
+  color: var(--text);
+  font-size: 12px;
+  transition: 0.2s;
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.restaurant-count {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+/* RESTAURANTS */
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.restaurant-card {
+  background: var(--white);
+  padding: 22px;
+  border: 1px solid #e5e0d5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-number {
+  color: var(--orange);
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+}
+
+.card-status {
+  color: var(--green);
+  font-size: 11px;
+}
+
+.restaurant-card h3 {
+  font-size: 17px;
+  color: var(--green);
+  margin-bottom: 5px;
+}
+
+.restaurant-card .area {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.restaurant-card .description {
+  font-size: 12px;
+  margin-top: 12px;
+  color: #55564f;
+}
+
+/* MAP */
+
+.map-section {
+  border-top: 1px solid #dedacf;
+}
+
+.map-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.map-note span {
+  color: var(--orange);
+  margin-left: 8px;
+}
+
+.map-note .visited-note {
+  color: var(--green);
+}
+
+.map-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid #e5e0d5;
+}
+
+.map-preview p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.map-preview a,
+.map-location-link {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.map-preview a:hover,
+.map-location-link:hover {
+  text-decoration: underline;
+}
+
+.map-canvas {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  border: 1px solid #d4d0c3;
+  background: #f0eee5;
+  cursor: grab;
+  touch-action: none;
+}
+
+.map-canvas.dragging {
+  cursor: grabbing;
+}
+
+.map-world {
+  position: absolute;
+  inset: -8%;
+  transform-origin: center;
+  user-select: none;
+}
+
+.city-map-art {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.map-pins {
+  position: absolute;
+  inset: 0;
+}
+
+.map-pin {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid white;
+  border-radius: 50% 50% 50% 0;
+  background: var(--orange);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-size: 9px;
+  font-weight: 700;
+  transform: translate(-50%, -80%) rotate(-45deg);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.map-pin span {
+  transform: rotate(45deg);
+}
+
+.map-pin.visited {
+  background: var(--green);
+}
+
+.map-pin:hover {
+  z-index: 2;
+  transform: translate(-50%, -80%) rotate(-45deg) scale(1.2);
+}
+
+.map-controls {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  display: grid;
+  gap: 5px;
+}
+
+.map-control {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #bbb8ae;
+  border-radius: 3px;
+  background: white;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  touch-action: manipulation;
+}
+
+.map-control:hover {
+  background: #f5f2e9;
+}
+
+.map-reset {
+  font-size: 16px;
+}
+
+/* JOURNAL */
+
+.journal-section {
+  border-top: 1px solid #dedacf;
+}
+
+.journal-stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--green);
+  color: white;
+  padding: 23px 30px;
+  min-width: 190px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  color: #d6dfd7;
+}
+
+.stat-card strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+}
+
+.stat-card span {
+  font-size: 12px;
+}
+
+.journal-subtitle {
+  color: var(--green);
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.journal-list {
+  display: grid;
+  gap: 10px;
+}
+
+.journal-item {
+  padding: 15px 18px;
+  background: var(--white);
+  border-left: 3px solid var(--green);
+  font-size: 13px;
+}
+
+.journal-item small {
+  display: block;
+  color: var(--muted);
+}
+
+/* MODAL */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 30;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 520px;
+  background: var(--paper);
+  padding: 35px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: var(--green);
+}
+
+.modal-content h2 {
+  color: var(--green);
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.modal-area,
+.modal-description {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.modal-map-link {
+  display: inline-block;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.modal-map-link:hover {
+  text-decoration: underline;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.action-button,
+.save-button {
+  border: 1px solid var(--green);
+  background: var(--green);
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.action-button {
+  flex: 1;
+}
+
+.memo-label {
+  display: block;
+  color: var(--green);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+#memo-input {
+  width: 100%;
+  min-height: 110px;
+  padding: 12px;
+  border: 1px solid #ccc7ba;
+  background: var(--white);
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.save-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  color: white;
+  margin-bottom: 8px;
+}
+
+footer p:not(.footer-logo) {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+footer small {
+  color: #b7c3b9;
+  font-size: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .header {
+    padding: 0 5%;
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .header nav {
+    gap: 12px;
+  }
+
+  .header nav a {
+    font-size: 10px;
+  }
+
+  .intro-section {
+    min-height: 350px;
+    padding: 50px 7%;
+  }
+
+  .section {
+    padding: 65px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .restaurant-card {
+    padding: 15px;
+  }
+
+  .restaurant-card h3 {
+    font-size: 14px;
+  }
+
+  .journal-stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    min-width: 0;
+    flex: 1;
+    padding: 17px;
+  }
+
+  .map-preview {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .map-canvas {
+    height: 360px;
+  }
+
+  .map-control {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header nav {
+    gap: 8px;
+  }
+
+  .header nav a {
+    font-size: 9px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+}

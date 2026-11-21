@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore Infantry | 誰かのシンガポール滞在記</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">SINGAPORE INFANTRY</a>
+    <nav>
+      <a href="#restaurants">お店を探す</a>
+      <a href="#map">マップ</a>
+      <a href="#journal">旅の記録</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="intro-background"></div>
+      <div class="intro-content">
+        <p class="eyebrow">A FOOD JOURNEY IN SINGAPORE</p>
+        <h1>観光ガイドには載らない、<br>ローカルシンガポール案内。</h1>
+        <p>街を歩いて見つけた名店たちをご紹介</p>
+      </div>
+    </section>
+
+    <section class="section" id="restaurants">
+      <div class="section-heading">
+        <p class="eyebrow">EXPLORE THE CITY</p>
+        <h2>シンガポールの美味しい店26選</h2>
+        <p>気になるお店を見つけて、自分だけの旅の記録を残そう。</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-button active" data-category="all">すべて</button>
+        <button class="filter-button" data-category="chicken">チキンライス</button>
+        <button class="filter-button" data-category="rice">ご飯もの</button>
+        <button class="filter-button" data-category="thai">タイ料理</button>
+        <button class="filter-button" data-category="noodle">麺料理</button>
+        <button class="filter-button" data-category="japanese">日本食</button>
+        <button class="filter-button" data-category="chinese">中華</button>
+        <button class="filter-button" data-category="sweets">スイーツ</button>
+        <button class="filter-button" data-category="other">その他</button>
+      </div>
+
+      <div class="restaurant-count">
+        <span id="restaurant-count">26</span> 店舗
+      </div>
+
+      <div id="restaurant-list" class="restaurant-grid"></div>
+    </section>
+
+    <section class="section map-section" id="map">
+      <div class="section-heading">
+        <p class="eyebrow">WALK AROUND</p>
+        <h2>街を歩いて、お店を探す。</h2>
+        <p>位置は概略です。ピンを押すと店舗の詳細が表示されます。</p>
+      </div>
+
+      <div class="map-note">
+        <span>●</span> 未訪問
+        <span class="visited-note">●</span> 訪問済み
+      </div>
+
+      <div class="map-preview">
+        <p>地図はドラッグで移動、ボタンで拡大・縮小できます。</p>
+        <a
+          href="https://www.google.com/maps/search/?api=1&amp;query=Singapore"
+          target="_blank"
+          rel="noopener noreferrer">シンガポール全体をGoogle マップで見る ↗</a>
+      </div>
+      <div id="map-canvas" class="map-canvas" role="application" aria-label="シンガポールの概略マップ。ドラッグで移動できます。">
+        <div id="map-world" class="map-world">
+          <svg class="city-map-art" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <pattern id="street-grid" width="150" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+                <rect width="150" height="120" fill="#f0eee5"></rect>
+                <path d="M-10 22C28 15 79 31 160 17 M-12 82C38 68 90 91 160 74 M32-10C25 30 43 75 29 130 M110-10C96 36 126 80 111 130" fill="none" stroke="#fffdf8" stroke-width="9"></path>
+                <path d="M-10 22C28 15 79 31 160 17 M-12 82C38 68 90 91 160 74 M32-10C25 30 43 75 29 130 M110-10C96 36 126 80 111 130" fill="none" stroke="#d9d7cc" stroke-width="1"></path>
+              </pattern>
+            </defs>
+            <rect width="1200" height="600" fill="url(#street-grid)"></rect>
+            <path d="M245 42l172-26 71 50-26 88-144 19-101-56z M538 321l45-17 42 39-22 60-53-5-29-39z M720 438l69-15 58 37-34 46-78-7-31-30z" fill="#dce6d5"></path>
+            <path d="M-20 500C93 457 190 459 290 479s150 72 217 65 79-31 86-75 6-84 47-105 91-6 112 39 13 83 64 102 112 7 172-26 137-18 252 21v120H-20z" fill="#c6deda"></path>
+            <path d="M520 255c-4 42 49 62 39 100s-29 65 16 105 50 61 65 89" fill="none" stroke="#b5d4d1" stroke-width="13"></path>
+            <path d="M78 260c126-44 222 26 329-5s170-78 270-48 185 19 307-31" fill="none" stroke="#fffdf8" stroke-width="17"></path>
+            <path d="M78 260c126-44 222 26 329-5s170-78 270-48 185 19 307-31" fill="none" stroke="#d1cfc3" stroke-width="2"></path>
+            <path d="M423 20c-18 90 43 136 23 213s-13 104 16 154" fill="none" stroke="#fffdf8" stroke-width="14"></path>
+            <path d="M423 20c-18 90 43 136 23 213s-13 104 16 154" fill="none" stroke="#d1cfc3" stroke-width="2"></path>
+            <path d="M831 96c-66 62-89 116-70 171s56 64 51 115 56 74 105 88" fill="none" stroke="#fffdf8" stroke-width="14"></path>
+            <path d="M831 96c-66 62-89 116-70 171s56 64 51 115 56 74 105 88" fill="none" stroke="#d1cfc3" stroke-width="2"></path>
+            <g fill="#7e8d7a" font-family="Arial, sans-serif" font-size="16" letter-spacing="3">
+              <text x="557" y="94">LITTLE INDIA</text>
+              <text x="357" y="122">ORCHARD</text>
+              <text x="660" y="205">BUGIS</text>
+              <text x="540" y="414">MARINA BAY</text>
+              <text x="1045" y="152">KATONG</text>
+              <text x="494" y="435" font-size="13" letter-spacing="2">CHINATOWN</text>
+              <text x="516" y="331" font-size="12" letter-spacing="2">CLARKE QUAY</text>
+              <text x="72" y="376" font-size="12" letter-spacing="2">ALEXANDRA</text>
+              <text x="484" y="540" font-size="12" letter-spacing="2">TANJONG PAGAR</text>
+              <text x="40" y="555" font-size="12" letter-spacing="2">SINGAPORE · CENTRAL REGION</text>
+            </g>
+          </svg>
+          <div id="map-pins" class="map-pins"></div>
+        </div>
+        <div class="map-controls" aria-label="地図操作">
+          <button type="button" class="map-control" data-map-action="zoom-in" aria-label="地図を拡大">+</button>
+          <button type="button" class="map-control" data-map-action="zoom-out" aria-label="地図を縮小">−</button>
+          <button type="button" class="map-control map-reset" data-map-action="reset" aria-label="地図を初期位置に戻す">⌂</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journal-section" id="journal">
+      <div class="section-heading">
+        <p class="eyebrow">MY TRAVEL JOURNAL</p>
+        <h2>旅の記録</h2>
+        <p>自分だけのシンガポールを記録しよう。</p>
+      </div>
+
+      <div class="journal-stats">
+        <div class="stat-card">
+          <p>訪問したお店</p>
+          <strong id="visited-count">0</strong>
+          <span> / 26 店</span>
+        </div>
+        <div class="stat-card">
+          <p>お気に入り</p>
+          <strong id="favorite-count">0</strong>
+          <span> 店</span>
+        </div>
+      </div>
+
+      <h3 class="journal-subtitle">訪問したお店</h3>
+      <div id="journal-list" class="journal-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-logo">SINGAPORE INFANTRY</p>
+    <p>誰かのシンガポール滞在記</p>
+    <small>© 2026 Singapore Infantry</small>
+  </footer>
+
+  <div id="restaurant-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-modal" class="close-button">×</button>
+      <p class="eyebrow">RESTAURANT DETAILS</p>
+      <h2 id="modal-name"></h2>
+      <p id="modal-area" class="modal-area"></p>
+      <p id="modal-description" class="modal-description"></p>
+      <a id="modal-map-link" class="modal-map-link" target="_blank" rel="noopener noreferrer">Google マップで場所を開く ↗</a>
+
+      <div class="modal-actions">
+        <button id="visited-button" class="action-button">訪問済みにする</button>
+        <button id="favorite-button" class="action-button">☆ お気に入り</button>
+      </div>
+
+      <label for="memo-input" class="memo-label">このお店のメモ</label>
+      <textarea id="memo-input" placeholder="食べたもの、感想、次回行きたい理由など..."></textarea>
+      <button id="save-memo" class="save-button">メモを保存する</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
