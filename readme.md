@@ -7,7 +7,7 @@ Singapore Infantry（シンガポール食巡りガイド）
 - 気になったお店をお気に入り登録し、訪問済みのお店や食事の感想を記録することで、自分だけのシンガポール食べ歩きガイドを作成できる。
 
 ## ③アプリのデプロイURL
-- （デプロイ後にURLを記入）
+- https://hfukamauchi-stack.github.io/task1121/
 
 ## ④アプリのログイン用IDまたはPassword（ある場合）
 - ID：なし
